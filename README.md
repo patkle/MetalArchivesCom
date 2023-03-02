@@ -13,7 +13,7 @@ A Jupyter Notebook with some EDA on that data can be found [here](https://www.ka
 
 The spider can be ran with
 ```zsh
-python3 -m scrapy crawl bands -a pages=5 -O bands.csv
+python3 -m scrapy crawl bands -a genre=Speed%2F -O bands.csv
 ```
 
 ### Arguments
@@ -22,7 +22,9 @@ With `-a` you can specify arguments for the spider.
 
 |argument   |type  |description   | 
 |---|---|---|
-|pages   |int   |number of pages to scrape   |
+|genre   |string   |genre to scrape   |
+|country   |string   |country of band origin   |
+|get_discography   |bool   |whether or not to also (roughly doubles amount of requests)   |
 
 
 ## Setting up locally
